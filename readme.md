@@ -1,1 +1,2 @@
-PHP design patterns
+##PHP design patterns
+miroslav.trninic@gmail.com
