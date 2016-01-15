@@ -1,35 +1,56 @@
+#DESIGN PATTERNS
+    
 CREATIONAL
 ==========
-    -abstract factory
-        -provides and interface for creating families of related or dependent objects without specifying their concrete classes.the new operator considered harmful.emphasies on families.
-    -factory method
-        -define an interface for creating an object, but let subclasses decide which class to instantiate.the new operator considered harmful.no emphasis on families.
-    -singleton
-        -ensure a class has only one instance and provide a global point of access to it.
-    -builder
-    -prototype
+    -Abstract Factory (factory definition first, family of related objects)
+        - abstract what is common for all classes
+        - client calls concrete class
+    -Factory Method (without family)
+    -Builder (build complex object in steps with common instructions)
+    -Prototype (__clone to other slot of memory,delegation)
+    -Singleton (class has only one instance, with global point of access)
 
-STRUCTURAL
-==========
-    -adapter
-    -bridge
-    -composite
-    -decorator
-    -facade
-    -flyweight
-    -proxy
+STRUCTURAL(compositional, logic internal to the structure)
+==========================================================
+    WRAPPERS:
+        -Decorator 
+            -smart proxy
+            -wrapped in constructor
+            -decorate object at run-time,
+            -same interface as wrapped class
+            -alternative to subclassing)
+            -must be a subclass of wrapped interface/object
+        -Proxy (
+            -surrogate for another object/
+            -same interface as wrapped class
+            -wrapped may not exist
+            -no object in constructor
+        -Bridge 
+            -more complex variation of adapter
+            -decouple an abstraction from implementation/orthogonal
 
-BEHAVIORAL
-==========
-    -chain
-    -command
-    -interpreter
-    -iterator
-    -mediator
-    -memento
-    -observer
-    -state
-    -strategy
-    -template method
-    -visitor
+        -Adapter 
+            -convert interface into one that clients expect/
+            -different interface from wrapped class(derived)
+            -exposes only releveant methods to client
+        -Facade (
+            -higher level interface
+            -different interface 
+    -Composite (composite/leaf, recursive composition)
+    -Flyweight (sharing expensive resources)
+
+BEHAVIORAL (decompositional,external to structure)
+==================================================
+    -Iterator (access aggregate object without internals)
+    ###SENDER/RECEIVER
+        -Observer (dependency changes state/decoupled interface)
+        -Mediator (encapsulates communication between multiple objects)
+        -Command (execute command on receiver/send request)
+        -Chain (multiple handlers for request/next)
+    -Memento (capture objects internal state/for restoring state)
+    -State (change behaviour depend on state)
+    -Strategy (interchangeable algorithms)
+    -Template Method (algorithm skeleton in a base class)
+    -Visitor (define new operation without changing classes/recursive structure)
+    -Interpreter
 
