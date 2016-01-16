@@ -7,21 +7,21 @@ abstract class AbstractBookFactory {/*{{{*/
 
 class OReillyBookFactory extends AbstractBookFactory {/*{{{*/
     private $context = "OReilly";
-    function makePHPBook() {
-        return new OReillyPHPBook;
-    }
     function makeMySQLBook() {
         return new OReillyMySQLBook;
+    }
+    function makePHPBook() {
+        return new OReillyPHPBook;
     }
 }/*}}}*/
 
 class SamsBookFactory extends AbstractBookFactory {/*{{{*/
     private $context = "Sams";
-    function makePHPBook() {
-        return new SamsPHPBook;
-    }
     function makeMySQLBook() {
         return new SamsMySQLBook;
+    }
+    function makePHPBook() {
+        return new SamsPHPBook;
     }
 }/*}}}*/
 
