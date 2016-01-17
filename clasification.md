@@ -50,7 +50,8 @@ BEHAVIORAL (decompositional,external to structure)
             -query for subject state
             -pull
             
-        -Mediator (encapsulates communication between multiple objects)
+        -Mediator 
+            -encapsulates communication between multiple objects
         -Command (execute command on receiver/send request)
         -Chain (multiple handlers for request/next)
     -Iterator (access aggregate object without internals)

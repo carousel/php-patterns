@@ -26,6 +26,7 @@ interface StrategyInterface {
 }
  
 class StrategyCaps implements StrategyInterface {
+    public $titleCount;
     public function showTitle($book_in) {
         $title = $book_in->getTitle();
         $this->titleCount++;
@@ -34,6 +35,7 @@ class StrategyCaps implements StrategyInterface {
 }
 
 class StrategyExclaim implements StrategyInterface {
+    public $titleCount;
     public function showTitle($book_in) {
         $title = $book_in->getTitle();
         $this->titleCount++;
@@ -42,6 +44,7 @@ class StrategyExclaim implements StrategyInterface {
 }
 
 class StrategyStars implements StrategyInterface {
+    public $titleCount;
     public function showTitle($book_in) {
         $title = $book_in->getTitle();
         $this->titleCount++;
